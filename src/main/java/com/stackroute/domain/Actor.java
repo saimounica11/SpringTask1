@@ -24,8 +24,9 @@ public class Actor {
     public void setGender(String gender) {
         this.gender = gender;
     }*/
-    public void displayinfo(){
-        System.out.println("Name is " +name+ " Gender is  " +gender+  " Age is " +age);
+   @Override
+    public String toString(){
+        return "Name is " +name+ " Gender is  " +gender+  " Age is " +age;
     }
 
 

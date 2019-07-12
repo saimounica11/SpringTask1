@@ -14,14 +14,11 @@ public class Main {
 
         ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
         Movie movie1=context.getBean("movie1", Movie.class);
-        Movie movie2=context.getBean("movie1", Movie.class);
-        Movie movie3=context.getBean("movie2",Movie.class);
-        System.out.println(movie1==movie2);
-        System.out.println(movie1==movie3);
-
-
-
-
+        String s1=movie1.toString();
+        Movie movie2=context.getBean("movie2", Movie.class);
+        String s2=movie2.toString();
+        System.out.println(s1);
+        System.out.println(s2);
 
     }
 }
