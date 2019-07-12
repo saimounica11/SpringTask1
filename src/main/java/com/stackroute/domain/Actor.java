@@ -5,7 +5,13 @@ public class Actor {
     private int age;
     private String gender;
 
-    public void setAge(int age) {
+    public Actor(String name, int age, String gender) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+    }
+
+   /* public void setAge(int age) {
         this.age = age;
     }
 
@@ -17,7 +23,7 @@ public class Actor {
 
     public void setGender(String gender) {
         this.gender = gender;
-    }
+    }*/
     public void displayinfo(){
         System.out.println("Name is " +name+ " Gender is  " +gender+  " Age is " +age);
     }

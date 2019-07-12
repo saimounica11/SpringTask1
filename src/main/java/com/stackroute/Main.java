@@ -13,12 +13,12 @@ public class Main {
     public static void main(String[] args){
 
         ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
-        Movie movie=context.getBean("movie", Movie.class);
-        movie.display();
+        Movie movie1=context.getBean("movie1", Movie.class);
+        Movie movie2=context.getBean("movie1", Movie.class);
+        Movie movie3=context.getBean("movie2",Movie.class);
+        System.out.println(movie1==movie2);
+        System.out.println(movie1==movie3);
 
-        BeanFactory factory=new XmlBeanFactory(new ClassPathResource("beans.xml"));
-        Movie m=(Movie)context.getBean("movie");
-        m.display();
 
 
 
