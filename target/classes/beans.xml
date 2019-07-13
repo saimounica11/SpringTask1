@@ -3,28 +3,14 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="actor" class="com.stackroute.domain.Actor">
-        <constructor-arg name="name" index= "0" value="Samantha" type="String"></constructor-arg>
-        <constructor-arg name="age" index="1" value="29" type="int"></constructor-arg>
-        <constructor-arg name="gender" index="2" value="Female" type="String"></constructor-arg>
 
-    </bean>
-    <bean id="actor1" class="com.stackroute.domain.Actor">
-        <constructor-arg name="name" index= "0" value="Sam" type="String"></constructor-arg>
-        <constructor-arg name="age" index="1" value="19" type="int"></constructor-arg>
-        <constructor-arg name="gender" index="2" value="Female" type="String"></constructor-arg>
+
+
+    <bean id="beanlifecycledemo" class="com.stackroute.domain.BeanLifecycleDemoBean" init-method="customInit"
+          destroy-method="customDestroy">
 
     </bean>
 
-
-    <bean id="movie1" class="com.stackroute.domain.Movie" autowire="byName">
-
-
-    </bean>
-    <bean id="movie2" class="com.stackroute.domain.Movie">
-        <property name="actor" ref="actor1"></property>
-
-    </bean>
 
 
 
