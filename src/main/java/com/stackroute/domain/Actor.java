@@ -5,13 +5,14 @@ public class Actor {
     private int age;
     private String gender;
 
-    public Actor(String name, int age, String gender) {
+    public Actor(String name, String gender, int age) {
         this.name = name;
-        this.age = age;
+
         this.gender = gender;
+        this.age = age;
     }
 
-   /* public void setAge(int age) {
+    /*public void setAge(int age) {
         this.age = age;
     }
 
